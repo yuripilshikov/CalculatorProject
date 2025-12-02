@@ -17,12 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     calculator_mk2.cpp \
+    calculatormathmodule.cpp \
     calculatorpanel.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
     calculator_mk2.h \
+    calculatormathmodule.h \
     calculatorpanel.h \
     mainwindow.h
 

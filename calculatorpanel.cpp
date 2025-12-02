@@ -50,7 +50,6 @@ void CalculatorPanel::processOperator()
     QString x = static_cast<QPushButton*>(QObject::sender())->text();
     QChar op = x.at(0);
 
-    // если оператор: записываем значение из строки ввода
     double input = ui->CalcText->text().toDouble();
     if(!first)
     {
@@ -59,16 +58,16 @@ void CalculatorPanel::processOperator()
         ui->CalcText->clear();
         first = true;
         action = op.unicode();
-        qDebug() << firstValue << action << secondValue;
+        //qDebug() << firstValue << action << secondValue;
     }
     else
     {
         secondValue = input;
-        qDebug() << firstValue << action << secondValue;
+        //qDebug() << firstValue << action << secondValue;
         qreal val = calculate(firstValue, secondValue, action);
         ui->evaluationText->setText(ui->evaluationText->text()
-                                    + QString::number(secondValue) + "=" + QString::number(val));
-            processClear();
+              + QString::number(secondValue) + "=" + QString::number(val));
+        processClear();
 
     }
 
