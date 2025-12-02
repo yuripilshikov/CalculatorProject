@@ -99,7 +99,7 @@ std::string Calculator_mk2::infixToPostfix(std::string infix)
     std::string postfix = "";
     for (int i = 0; i < infix.length(); i++) {
             char c = infix[i];
-            if (isalnum(c))
+            if (isalnum(c) || c == '.')
             {
                 postfix += c;
             }
