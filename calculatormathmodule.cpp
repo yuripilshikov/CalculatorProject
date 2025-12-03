@@ -25,7 +25,7 @@ double CalculatorMathModule::Calculate(double left, double right, char op)
 bool CalculatorMathModule::CheckParenthesis(std::string str)
 {
     std::stack<char> st;
-    for (int i = 0; i < str.length(); ++i)
+    for (unsigned int i = 0; i < str.length(); ++i)
     {
         char c = str[i];
         switch (c)

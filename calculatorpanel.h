@@ -18,11 +18,14 @@ public:
 signals:
     void clearScreen();
     void showResult(qreal result);
+    void sendChar(QChar ch);
+    void sendDigit(QChar ch);
 
 public slots:
-    void processDigit();
-    void processOperator();
     void processClear();
+
+    void readDigitButton(QChar dig);
+    void readOperatorButton(QChar op);
 
 private:
     Ui::CalculatorPanel *ui;
