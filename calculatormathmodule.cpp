@@ -22,7 +22,7 @@ double CalculatorMathModule::Calculate(double left, double right, char op)
     }
 }
 
-bool CalculatorMathModule::CheckParenthesis(std::string str)
+bool CalculatorMathModule::CheckParenthesis(const std::string& str)
 {
     std::stack<char> st;
     for (unsigned int i = 0; i < str.length(); ++i)
@@ -43,7 +43,7 @@ bool CalculatorMathModule::CheckParenthesis(std::string str)
     return true;
 }
 
-std::string CalculatorMathModule::InfixToPostfix(std::string infix)
+std::string CalculatorMathModule::InfixToPostfix(const std::string& infix)
 {
     std::stack<char> st;
     std::string postfix = "";
@@ -86,7 +86,7 @@ std::string CalculatorMathModule::InfixToPostfix(std::string infix)
         return postfix;
 }
 
-double CalculatorMathModule::CalculatePostfix(std::string str)
+double CalculatorMathModule::CalculatePostfix(const std::string& str)
 {
     // tokenize first
     char delimeter = ' ';
